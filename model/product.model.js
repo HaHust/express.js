@@ -4,4 +4,4 @@ var schema = new mongoose.Schema({
     img: String,
     description: String
 })
-module.exports = mongoose.model('product', schema);
+module.exports = mongoose.model('product', schema, 'product');
