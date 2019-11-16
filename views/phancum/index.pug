@@ -1,0 +1,35 @@
+extends ../layout/layout.pug
+block content
+    h1(style='color: white') DỮ LIỆU
+    table.table
+        tr
+            td(style='color: white') Channel
+            td(style='color: white') Region
+            td(style='color: white') Fresh
+            td(style='color: white') Milk
+            td(style='color: white') Grocery
+            td(style='color: white') Frozen
+            td(style='color: white') Detergents_Paper
+            td(style='color: white') Delicassen
+        each pc in phancum
+            tr
+                td(style='color: white')= pc.Channel
+                td(style='color: white')= pc.Region
+                td(style='color: white')= pc.Fresh
+                td(style='color: white')= pc.Milk
+                td(style='color: white')= pc.Grocery
+                td(style='color: white')= pc.Frozen
+                td(style='color: white')= pc.Detergents_Paper
+                td(style='color: white')= pc.Delicassen
+    nav(aria-label='Page navigation example')
+        ul.pagination.justify-content-center
+            li.page-item
+                a.page-link(href='/phancum?page='+(page-1), tabindex='1' aria-disabled='true') Trước
+            li.page-item
+                a.page-link(href='/phancum?page='+(page-1))= page-1
+            li.page-item
+                a.page-link(href='/phancum?page='+page)= page
+            li.page-item
+                a.page-link(href='/phancum?page='+(page+1))= page+1
+            li.page-item
+                a.page-link(href='/phancum?page='+(page+1)) Sau

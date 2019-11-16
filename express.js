@@ -3,6 +3,7 @@ var express = require('express');
 var userRouter = require('./router/user.router');
 var productRouter = require('./router/product.router');
 var authRouter = require('./router/auth.router');
+var phancumRouter = require('./router/phancum.router');
 var cookieParser = require('cookie-parser');
 var loginRequire = require('./middleWare/auth.middleWare')
 var mongoose = require('mongoose');
@@ -28,3 +29,6 @@ app.use('/auth', authRouter);
 app.use('/user', loginRequire.loginRequire,userRouter); // ROUTER
 
 app.use('/product', productRouter);
+
+app.use('/phancum', phancumRouter);
+
