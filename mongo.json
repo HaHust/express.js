@@ -1,0 +1,19 @@
+{
+    "users": [
+      {
+        "name": "ha",
+        "phone": "0981022054",
+        "fresh": "fafadf",
+        "milk": "ffff",
+        "email": "vanha.hust@gmail.com",
+        "pass": "111",
+      },
+      {
+        "name": "Nguyễn văn hà",
+        "fresh": "fafadf",
+        "frozen": "",
+        "milk": "",
+        "avatar": "uploads/74e5d83a191d3bc6b8dd04d05bc06da1"
+      }
+    ]
+}

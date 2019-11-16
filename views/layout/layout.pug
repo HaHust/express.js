@@ -1,0 +1,42 @@
+html
+    head
+        title My Site
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+        style.
+
+            body {
+                background-image: url("https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg");
+                background-color: #7fe066;
+                }
+            .img1{
+                width: 260;
+                height: 500;
+            }
+            .card1{
+                display: grid;
+                grid-template-columns: 260Px 260px 260px 260px;
+                margin: 20px
+            }
+            .card2{
+                width: 220;
+                height: 410;
+                margin:20px
+            }
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='/')
+                h1 DSS
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNavAltMarkup.collapse.navbar-collapse
+                .navbar-nav
+                a.nav-item.nav-link.active(href='/user')
+                    | Danh Sách Khách Hàng
+                    span.sr-only (current)
+                a.nav-item.nav-link(href='/product') Sản Phẩm
+                a.nav-item.nav-link(href='#') Phân Cụm Khách Hàng
+            a.btn.btn-dark(href='/auth/login') SignOut
+            if user
+                p= user.name
+        .container.pt-5
+            block content
