@@ -6,4 +6,5 @@ var router = express.Router();
 
 router.get('/', control.index);
 
+router.get('/result', control.result);
 module.exports = router;

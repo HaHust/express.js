@@ -1,10 +1,13 @@
+var user = require('../model/user.model');
 var db = require('../db');
 const shortid = require('shortid');
 
 module.exports.index = function (req, res) {
-    res.render('user/index', {
-        users: db.get('users').value()
-    });
+    user.find().then(function(docs){
+        res.render('user/index',{
+            users: docs
+        })
+    })
 };
 module.exports.view = function (req, res) {
     var id = req.params.id;

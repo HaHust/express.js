@@ -18,3 +18,6 @@ module.exports.index = function (req, res, next) {
         });
     });
 };
+module.exports.result = function(req,res,next){
+    res.render('phancum/result')
+}
